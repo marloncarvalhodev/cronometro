@@ -1,0 +1,68 @@
+:root{
+    --primary-color:  rgb(13,106,134);
+    --primer-color-darker: rgb(9,48,56)
+}
+
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    margin: 0;
+    margin: 0;
+    background: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+     
+   
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: lighter;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.h1{
+    font-size: 30px;
+}
+
+#relogio.pausado{
+    color: red;
+    
+}
+
+#relogio{
+    color: black;
+    font-size: 50px;
+ 
+}
+
+#iniciar{
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid black 4px;
+}
+
+#pausar{
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid black 4px;
+}
+
+#zerar{
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid black 4px;
+}
