@@ -1,68 +1,152 @@
-:root{
-    --primary-color:  rgb(13,106,134);
-    --primer-color-darker: rgb(9,48,56)
+:root {
+    --bg-black: #000000;
+    --text-white: #ffffff;
+    --text-ms: #71717a;
+
+    --reset-bg: #1c1c1e;
+    --reset-text: #a1a1aa;
+
+    --start-bg: #0a2912;
+    --start-text: #34d399;
+
+    --pause-bg: #3b0a0a;
+    --pause-text: #f87171;
+
+    --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
 }
 
-
-*{
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
-body{
-    margin: 0;
-    margin: 0;
-    background: var(--primary-color);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-     
-   
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.container{
-    max-width: 640px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    font-weight: lighter;
-    font-size: 40px;
-    text-align: center;
-    
+.stopwatch {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
 }
 
-.h1{
-    font-size: 30px;
+.time-display {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    font-family: var(--font-ui);
+    font-size: clamp(3.25rem, 11vw, 5.25rem);
+    font-weight: 300;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--text-white);
+    user-select: none;
 }
 
-#relogio.pausado{
-    color: red;
-    
+.centiseconds {
+    font-size: 0.55em;
+    font-weight: 400;
+    color: var(--text-ms);
+    letter-spacing: -0.02em;
+    margin-left: 0.04em;
 }
 
-#relogio{
-    color: black;
-    font-size: 50px;
- 
+.controls {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#iniciar{
-    font-size: 25px;
-    border-radius: 10px;
-    padding: 10px;
-    border: solid black 4px;
+.btn-circle {
+    position: relative;
+    appearance: none;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        transform 0.12s cubic-bezier(0.2, 0, 0, 1),
+        background-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
 
-#pausar{
-    font-size: 25px;
-    border-radius: 10px;
-    padding: 10px;
-    border: solid black 4px;
+/* Anel interno sutil característico do cronômetro do iOS */
+.btn-circle::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-black);
+    pointer-events: none;
 }
 
-#zerar{
-    font-size: 25px;
-    border-radius: 10px;
-    padding: 10px;
-    border: solid black 4px;
+.btn-circle:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.45);
+    outline-offset: 4px;
 }
+
+.btn-circle:active:not(:disabled) {
+    transform: scale(0.94);
+}
+
+.btn-reset {
+    background-color: var(--reset-bg);
+    color: var(--reset-text);
+}
+
+.btn-reset:hover:not(:disabled) {
+    filter: brightness(1.15);
+}
+
+.btn-reset:disabled {
+    opacity: 0.45;
+    cursor: default;
+}
+
+.btn-start {
+    background-color: var(--start-bg);
+    color: var(--start-text);
+}
+
+.btn-start:hover {
+    filter: brightness(1.12);
+}
+
+.btn-pause {
+    background-color: var(--pause-bg);
+    color: var(--pause-text);
+}
+
+.btn-pause:hover {
+    filter: brightness(1.12);
+}
+
+

@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cronômetro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
-
 <body>
+    <main class="stopwatch">
+        <time id="relogio" class="time-display" aria-live="off" datetime="PT0S">
+            <span id="tempo-principal">00:00:00</span><span id="milesimos" class="centiseconds">.00</span>
+        </time>
 
-    <section class="container">
-
-        <h1>Cronômetro</h1>
-
-        <p id="relogio">00:00:00</p>
-
-        <p class="button">
-            <button id="iniciar">Iniciar</button>
-            <button id="pausar">Pausar</button>
-            <button id="zerar">Zerar</button>
-        </p>
-
-    </section>
+        <footer class="controls" aria-label="Controles do cronômetro">
+            <button type="button" id="zerar" class="btn-circle btn-reset" disabled>
+                <span>Zerar</span>
+            </button>
+            <button type="button" id="iniciar" class="btn-circle btn-start" data-running="false">
+                <span>Iniciar</span>
+            </button>
+        </footer>
+    </main>
 
     <script src="assets/index.js"></script>
 </body>
-
 </html>
+
 
