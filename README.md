@@ -1,17 +1,30 @@
-# Cronômetro
+# Cronômetro Minimalista
 
-Aplicação web simples para cronometrar o tempo, com interface interativa 
-desenvolvida em HTML, CSS e JavaScript.
+Uma aplicação web de cronômetro desenvolvida com foco em alta precisão, tipografia tabular e interface minimalista inspirada no design escuro do iOS.
 
 ## Funcionalidades
-- Iniciar contagem de tempo
-- Pausar e retomar a contagem
-- Zerar o cronômetro
+
+- **Precisão com milissegundos:** contagem fluida de horas, minutos, segundos e centésimos.
+- **Tipografia tabular:** dígitos monoespaçados para evitar oscilações horizontais na tela durante a contagem.
+- **Interface Dark Mode:** design escuro focado no contraste funcional e ergonomia visual.
+- **Controle de estados:** alternância intuitiva entre Iniciar, Pausar e Zerar.
 
 ## Tecnologias
-- HTML
-- CSS
-- JavaScript
 
-## Como usar
- clone o repositório e abra o arquivo index.html no navegador.
+- **HTML5** (Estrutura semântica e acessibilidade)
+- **CSS3** (Flexbox, variáveis CSS e tipografia otimizada)
+- **JavaScript (ES6+)** (Manipulação de DOM e temporização nativa)
+
+## Como Executar
+
+Clone o repositório localmente e abra no navegador:
+
+```bash
+# Clone este repositório
+git clone [https://github.com/marloncarvalhodev/cronometro.git](https://github.com/marloncarvalhodev/cronometro.git)
+
+# Acesse a pasta do projeto
+cd cronometro
+
+# Abra no navegador (ou dê dois cliques no index.html)
+start index.html
