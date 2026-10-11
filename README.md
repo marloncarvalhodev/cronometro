@@ -2,7 +2,7 @@
 
 Uma aplicação web de cronômetro desenvolvida com foco em alta precisão, tipografia tabular e interface minimalista inspirada no design escuro do iOS.
 
-## Aceder Online
+## Acesso Online
 
 A aplicação está disponível e alojada através do GitHub Pages:
 [https://marloncarvalhodev.github.io/cronometro/](https://marloncarvalhodev.github.io/cronometro/)
@@ -28,7 +28,7 @@ Clone o repositório e abra no navegador:
 # Clonar o repositório
 git clone [https://github.com/marloncarvalhodev/cronometro.git](https://github.com/marloncarvalhodev/cronometro.git)
 
-# Aceder à pasta do projeto
+# Acessar à pasta do projeto
 cd cronometro
 
 # Abrir no navegador
